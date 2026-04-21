@@ -1,34 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SMS Registration</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register for SMS Alerts — Assure AI LTD</title>
+  <meta name="description" content="Register your phone number to receive SMS alerts from the Assure AI Elderly Care Robot Service — medication reminders, health alerts, and emergency notifications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Register for SMS Alerts</h1>
 
-  <p>
-    Enter your phone number to receive SMS alerts for emergency events such as fall detection.
-  </p>
-  <p>
-By providing your phone number, you agree to receive SMS alerts related to emergency events such as fall detection.
-Message frequency may vary. Message and data rates may apply.
-Reply STOP to unsubscribe or HELP for help.
-  </p>
-  <form>
-    <label>Phone Number:</label><br>
-    <input type="text" placeholder="+1XXXXXXXXXX"><br><br>
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">A</span>
+      <span>Assure AI <span style="color:var(--text-500);font-weight:500;">LTD</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#service">Service</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#sms">SMS Terms</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="signup.html" class="nav-cta">Register</a></li>
+    </ul>
+  </div>
+</header>
 
-    <input type="checkbox" required>
-    I agree to receive SMS alerts related to emergency events such as fall detection.
-    Message frequency may vary. Message and data rates may apply.
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Get started</div>
+    <h1>Register for SMS Alerts</h1>
+    <p>Enter your information below to receive SMS reminders, wellness check-ins, and emergency notifications from the Assure AI Elderly Care Robot Service.</p>
+  </div>
+</section>
 
-    <br><br>
-    <button type="submit">Register</button>
-  </form>
+<section>
+  <div class="container form-wrap">
 
-  <p>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms and Conditions</a>
-  </p>
+    <div class="form-card">
+      <h2>Create your account</h2>
+      <p>We'll only use the phone number below to send service-related SMS messages. You can opt out at any time by replying STOP.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! Our team will contact you shortly to complete setup.');">
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <span class="hint">Used for account recovery and important notices. We never share your email.</span>
+        </div>
+
+        <div class="field">
+          <label for="phone">Mobile phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" pattern="[+0-9\s\-\(\)]{7,}" required>
+          <span class="hint">This number will receive SMS reminders and emergency alerts.</span>
+        </div>
+
+        <div class="field">
+          <label for="relation">Relationship to the elderly individual</label>
+          <input type="text" id="relation" name="relation" placeholder="e.g. Daughter, Son, Caregiver, Self">
+        </div>
+
+        <label class="checkbox" for="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>
+            <strong>I agree to receive SMS alerts</strong> related to service events such as medication reminders,
+            wellness check-ins, and emergency notifications. Message frequency may vary.
+            Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe or <strong>HELP</strong> for help.
+            I have read and accept the
+            <a href="privacy.html">Privacy Policy</a> and
+            <a href="terms.html">Terms of Service</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Register for SMS Alerts</button>
+      </form>
+    </div>
+
+    <aside class="form-side">
+      <h3>What to expect</h3>
+      <ul class="info-list">
+        <li>
+          <span class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <div>
+            <h4>Explicit opt-in</h4>
+            <p>You're always in control — consent is required and revocable.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 4v-4z"/></svg>
+          </span>
+          <div>
+            <h4>Types of messages</h4>
+            <p>Medication reminders, activity alerts, weather warnings, and emergency notifications.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <div>
+            <h4>Frequency</h4>
+            <p>Varies with service activity. Standard message &amp; data rates may apply.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </span>
+          <div>
+            <h4>Opt out anytime</h4>
+            <p>Reply <strong>STOP</strong> to unsubscribe. Reply <strong>HELP</strong> for support.</p>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <div>
+            <h4>Privacy protected</h4>
+            <p>We never sell or share your phone number. See our <a href="privacy.html">Privacy Policy</a>.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="callout" style="margin-top:8px;">
+        If you are registering on behalf of an elderly individual, you confirm you have obtained their lawful authorization as described in our <a href="terms.html">Terms of Service</a>.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">A</span>
+          <span>Assure AI LTD</span>
+        </a>
+        <p>AI-powered SMS care for elderly individuals and their families — timely reminders, gentle check-ins, and emergency support.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="index.html#service">Our Service</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="signup.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="index.html#sms">SMS Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>Email: <a href="mailto:m17701613201@gmail.com">m17701613201@gmail.com</a></li>
+          <li>Help SMS: 1-800-829-4933</li>
+          <li>1500 N Grant St Ste R,<br/>Denver, CO 80203</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Assure AI LTD. All rights reserved.</span>
+      <span>Reply STOP to unsubscribe · Reply HELP for help</span>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
+
