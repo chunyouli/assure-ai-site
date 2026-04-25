@@ -27,13 +27,13 @@
       <li><a href="#sms">SMS Terms</a></li>
       <li><a href="privacy.html">Privacy</a></li>
       <li><a href="terms.html">Terms</a></li>
-      <li><a href="signup.html" class="nav-cta">Register</a></li>
+      <li><a href="#register" class="nav-cta">Register</a></li>
     </ul>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
+<!-- ============ HERO + REGISTER ============ -->
+<section class="hero" id="register">
   <div class="container hero-grid">
     <div>
       <span class="hero-eyebrow"><span class="dot"></span> Trusted elderly care over SMS</span>
@@ -44,8 +44,8 @@
         no app required, just SMS.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="signup.html">Register for SMS Alerts</a>
         <a class="btn btn-outline" href="#how">See how it works</a>
+        <a class="btn btn-outline" href="#service">Our service</a>
       </div>
       <div class="hero-meta">
         <span>
@@ -63,18 +63,53 @@
       </div>
     </div>
 
-    <div class="hero-card">
-      <div class="phone-mock">
-        <span class="time">Today · 8:00 AM</span>
-        <div class="msg">Good morning, Mary. It's time to take your blood pressure medication.</div>
-        <div class="msg sent">Done, thank you.</div>
-        <span class="time">12:30 PM</span>
-        <div class="msg">Reminder: walk for 15 minutes. Reply "HELP" anytime.</div>
-        <span class="time">6:00 PM · Family notice</span>
-        <div class="msg" style="background:#ecfdf5;color:#065f46;">
-          Mom completed all medications today.
-        </div>
+    <div class="form-card hero-form">
+      <div class="form-card-head">
+        <span class="badge">Get started</span>
+        <h2>Register for SMS alerts</h2>
+        <p>We'll only use your phone number to send service-related SMS messages. You can opt out at any time by replying STOP.</p>
       </div>
+
+      <form onsubmit="event.preventDefault(); alert('Thank you! Our team will contact you shortly to complete setup.');">
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Mobile phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" pattern="[+0-9\s\-\(\)]{7,}" required>
+          <span class="hint">This number will receive SMS reminders and emergency alerts.</span>
+        </div>
+
+        <div class="field">
+          <label for="relation">Relationship to the elderly individual</label>
+          <input type="text" id="relation" name="relation" placeholder="e.g. Daughter, Son, Caregiver, Self">
+        </div>
+
+        <label class="checkbox" for="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>
+            <strong>I agree to receive SMS alerts</strong> related to service events such as medication reminders,
+            wellness check-ins, and emergency notifications. Message frequency may vary.
+            Message and data rates may apply. Reply <strong>STOP</strong> to unsubscribe or <strong>HELP</strong> for help.
+            I have read and accept the
+            <a href="privacy.html">Privacy Policy</a> and
+            <a href="terms.html">Terms of Service</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Register for SMS Alerts</button>
+
+        <p class="form-footnote">
+          By registering on behalf of an elderly individual, you confirm you have obtained their lawful authorization.
+        </p>
+      </form>
     </div>
   </div>
 </section>
@@ -184,7 +219,7 @@
         any time by replying <strong>STOP</strong>, or request help by replying
         <strong>HELP</strong>.
       </p>
-      <a class="btn btn-accent" href="signup.html">Opt in to SMS alerts</a>
+      <a class="btn btn-accent" href="#register">Opt in to SMS alerts</a>
     </div>
 
     <aside class="sms-consent-box">
@@ -217,7 +252,7 @@
         <ul>
           <li><a href="#service">Our Service</a></li>
           <li><a href="#how">How it works</a></li>
-          <li><a href="signup.html">Register</a></li>
+          <li><a href="#register">Register</a></li>
         </ul>
       </div>
       <div class="footer-col">
